@@ -1,0 +1,137 @@
+/* Home Page Navbar - Transparent */
+.nav-home {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 15px;
+}
+
+/* Other Pages Navbar - Solid Black */
+.nav-dark {
+    background-color: black !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+    color: white !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 15px;
+}
+
+/* Ensure Buttons Stay White */
+.nav-home button, .nav-dark button {
+    color: white !important;
+}
+
+.nav-home h1, .nav-dark h1 {
+    color: white !important;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Mobile Menu (Initially Hidden) */
+.menu-icon {
+    display: none;  /* Desktop view mein hidden */
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+}
+
+.dropdown-menu li:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ------------------ RESPONSIVE DESIGN ------------------ */
+
+/* Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-icon {
+        display: block; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .nav-links.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .nav button, .nav a {
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .nav {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .nav-links {
+        padding: 10px;
+    }
+}

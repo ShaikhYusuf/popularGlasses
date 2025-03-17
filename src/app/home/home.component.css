@@ -1,0 +1,210 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.hero-section {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
+}
+
+
+.carousel-inner {
+    max-width: 80%;  /* Carousel ka size */
+    margin: auto;  /* Center me lane ke liye */
+  }
+  
+  .carousel-item img {
+    max-height: 400px; /* Image ki max height */
+    object-fit: cover; /* Image ko frame me set karne ke liye */
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    filter: invert(100%); /* Buttons ko visible karne ke liye */
+    width: 5%; /* Button size chota karne ke liye */
+  }
+  
+.swiper {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Image */
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* filter: brightness(60%); Thoda aur dark background for better readability */
+}
+
+/* Overlay Content */
+.overlay {
+    position: absolute;
+    text-align: left;
+    color: white;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Headline */
+.overlay h1 {
+    font-size: 3rem; /* Thoda bada aur impactful */
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6); /* Better shadow for readability */
+    margin-bottom: 15px;
+}
+
+/* Description */
+.overlay p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Button */
+.portfolio-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.portfolio-btn:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+
+.carousel-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+  
+  .card {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .overlay {
+        left: 5%;
+        width: 90%;
+        text-align: center;
+    }
+
+    .overlay h1 {
+        font-size: 2.2rem;
+    }
+
+    .overlay p {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+
+.row3 {
+  margin-top: 30px;
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  flex-direction: column; /* ✅ Items vertically align hongay */
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  padding: 20px; /* ✅ Space added */
+  text-align: center;
+  gap: 15px; /* ✅ Space between elements */
+}
+
+.para {
+  font-family: 'Arial Black', sans-serif;
+  font-weight: bold;
+  font-size: 22px; /* ✅ Thoda bada aur readable */
+  color: black;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✅ Hover Effect */
+.button:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.fot-section{
+  margin-top: 20px;
+  display: flex;
+  height: 100px;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+}
+.text{
+  color: white;
+}
