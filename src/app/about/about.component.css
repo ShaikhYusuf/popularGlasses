@@ -1,137 +1,135 @@
-/* Home Page Navbar - Transparent */
-.nav-home {
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    backdrop-filter: blur(10px) !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
-    color: white !important;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 10px 15px;
-}
 
-/* Other Pages Navbar - Solid Black */
-.nav-dark {
-    background-color: black !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
-    color: white !important;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 10px 15px;
-}
-
-/* Ensure Buttons Stay White */
-.nav-home button, .nav-dark button {
-    color: white !important;
-}
-
-.nav-home h1, .nav-dark h1 {
-    color: white !important;
-}
-
-.spacer {
-    flex: 1 1 auto;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px;
-}
-
-/* Mobile Menu (Initially Hidden) */
-.menu-icon {
-    display: none;  /* Desktop view mein hidden */
-}
-
-/* Dropdown Styling */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    list-style: none;
-    padding: 10px 0;
+body {
     margin: 0;
-    top: 100%;
-    left: 0;
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
 }
 
-.dropdown-menu li a {
-    color: #fff;
-    text-decoration: none;
+/* Hero Section */
+.hero {
+    background-color: #ffffff;
+    padding: 60px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Container Styling */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+.header {
+    text-align: left;   
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.header hr {
+    width: 80px;
+    height: 3px;
+    background-color: #0078ff;
+    border: none;
+    margin: 0;
+}
+
+/* Image Section Styling */
+.image-section img {
+    width: 100%;         
+    max-width: 700px;    
+    height: 400px;       
+    object-fit: cover;    
+    border-radius: 12px;
     display: block;
-    padding: 8px 16px;
+    margin: 0 auto 40px;
+    border: 5px solid #e0e0e0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.dropdown-menu li:hover {
-    background-color: #555;
+/* Team Section Styling */
+.team-section {
+    background-color: #f0f2f5;  
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
+.team-section h2 {
+    text-align: left;  
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
-/* ------------------ RESPONSIVE DESIGN ------------------ */
-
-/* Tablets and Smaller Devices */
-@media (max-width: 1024px) {
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu-icon {
-        display: block; /* Show hamburger icon */
-    }
-
-    .nav-links {
-        display: none; /* Hidden by default */
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .nav-links.show {
-        display: flex; /* Show menu when toggled */
-    }
-
-    .nav button, .nav a {
-        width: 100%;
-        text-align: left;
-        padding: 10px 0;
-    }
+mat-divider {
+    width: 50px;
+    background-color: #0078ff;
+    height: 3px;
+    border-radius: 2px;
+    margin: 10px 0 30px;
 }
 
-/* Mobile Devices */
-@media (max-width: 600px) {
-    .nav {
-        padding: 10px;
-    }
+/* Team Card Styling */
+.team-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-    h1 {
-        font-size: 20px;
-    }
+.team-member {
+    background-color: #ffffff;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
 
-    .dropdown-menu {
-        position: relative;
-        width: 100%;
-        border-radius: 0;
-    }
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 120, 255, 0.2);
+}
 
-    .nav-links {
-        padding: 10px;
-    }
+mat-card-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0078ff;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+    color: #0078ff;
+    font-size: 20px;
+}
+
+.team-member .role {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 14px;
+    text-align: justify;
 }
